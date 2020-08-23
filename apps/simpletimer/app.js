@@ -30,7 +30,7 @@ function draw() {
   const minutes = Math.floor(counter / 60);
   const seconds = Math.floor(counter % 60);
   const seconds2Digits = seconds < 10 ? `0${seconds}` : seconds.toString();
-  g.clearRect(0, 70, 220, 160);
+  g.clearRect (0 , 0, 240, 160);
    g.setFontAlign(-1, -1);
   g.setFont("6x8", 12);
   g.drawString( `${minutes < 10 ? "0" : ""}${minutes}`, 0, 5 );
