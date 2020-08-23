@@ -31,13 +31,11 @@ function draw() {
   const seconds = Math.floor(counter % 60);
   const seconds2Digits = seconds < 10 ? `0${seconds}` : seconds.toString();
   g.clearRect(0, 70, 220, 160);
-  g.setFontAlign(0, 0);
-  g.setFont("6x8", 9);
-  g.drawString(
-    `${minutes < 10 ? "0" : ""}${minutes}:${seconds2Digits}`,
-    120,
-    120
-  );
+   g.setFontAlign(-1, -1);
+  g.setFont("6x8", 12);
+  g.drawString( `${minutes < 10 ? "0" : ""}${minutes}`, 0, 5 );
+  g.drawString( `:${seconds2Digits}`, 35, 90 );
+
 }
 
 function countDown() {
@@ -97,9 +95,9 @@ function changeState() {
 
 function drawLabels() {
   g.clear();
-  g.setFontAlign(-1, 0);
+  g.setFontAlign(-1, 1);
   g.setFont("6x8", 7);
-  g.drawString(`+  +`, 35, 180);
+  g.drawString(`+  +`, 35, 240);
   g.setFontAlign(0, 0, 3);
   g.setFont("6x8", 1);
   g.drawString(`reset                   (re)start`, 230, 120);
