@@ -32,7 +32,7 @@ function draw() {
   const seconds2Digits = seconds < 10 ? `0${seconds}` : seconds.toString();
   g.clearRect (0 , 0, 240, 160);
    g.setFontAlign(-1, -1);
-  g.setFont("vector", 12);
+  g.setFont("Vector", 80);
   g.drawString( `${minutes < 10 ? "0" : ""}${minutes}`, 0, 5 );
   g.drawString( `:${seconds2Digits}`, 35, 90 );
 
